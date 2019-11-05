@@ -1,0 +1,5 @@
+*
+!copy_ldd.sh
+!target/*-runner
+!target/*-runner.jar
+!target/lib/*

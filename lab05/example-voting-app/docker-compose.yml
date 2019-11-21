@@ -24,7 +24,7 @@ services:
       - front-tier
       - back-tier
 
-  worker:
+  worker.net:
     build:
       context: ./worker
     depends_on:

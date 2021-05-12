@@ -1,4 +1,4 @@
-version: ':8080'
+version: '3'
 
 services:
   redis:
@@ -7,6 +7,9 @@ services:
       - "6379:6379"
   db:
     image: postgres:9.4
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
     ports:
       - "5432:5432"
   vote:
@@ -14,7 +17,7 @@ services:
     ports:
       - "5000:80"
     deploy:
-      replicas: 2
+      replicas: 1
   result:
     image: dockersamples/examplevotingapp_result:before
     ports:
